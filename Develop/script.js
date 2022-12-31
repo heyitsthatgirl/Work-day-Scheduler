@@ -1,3 +1,9 @@
+// display the date and time in the header
+var dayObject = dayjs();
+var date = document.getElementById("currentDay");
+date.innerHTML = dayObject.format("dddd MM/DD/YYYY hh:mma");
+console.log(dayObject.format("dddd MM/DD/YYYY hh:mma"));
+
 // Wrap all code that interacts with the DOM in a call to jQuery to ensure that
 // the code isn't run until the browser has finished rendering all the elements
 // in the html.
@@ -21,3 +27,21 @@ $(function () {
   //
   // TODO: Add code to display the current date in the header of the page.
 });
+
+
+// var myDate = new Date();
+// var myDateFormatted = formatDate(myDate);
+
+// function formatDate(dateObject) {
+//   var parts = {
+//     date: dateObject.getDate(),
+//     month: dateObject.getMonth() + 1,
+//     year: dateObject.getFullYear(),
+//     hour: (dateObject.getHours() % 12) || 12,
+//     minute: dateObject.getMinutes().toString().padStart(2, "0"),
+//     amOrPm: dateObject.getHours() <12 ? "AM" : "PM"
+//   };
+//   return `${parts.month}/${parts.date}/${parts.year} ${parts.hour}:${parts.minute} ${parts.amOrPm}`;
+// }
+// console.log(myDateFormatted);
+
