@@ -1,13 +1,18 @@
 // display the date and time in the header
-var dayObject = dayjs();
-var date = document.getElementById("currentDay");
+let dayObject = dayjs();
+let date = document.getElementById('currentDay');
 date.innerHTML = dayObject.format("dddd MM/DD/YYYY hh:mma");
 console.log(dayObject.format("dddd MM/DD/YYYY hh:mma"));
 
-// Wrap all code that interacts with the DOM in a call to jQuery to ensure that
-// the code isn't run until the browser has finished rendering all the elements
-// in the html.
+
+// function only executes once all elements are loaded onto the page
 $(function () {
+ 
+  $('button').click(function(){
+    var txt = $('textarea').val();
+    console.log(txt);
+    localStorage.setItem("to do: ", JSON.stringify(txt));
+  });
   // TODO: Add a listener for click events on the save button. This code should
   // use the id in the containing time-block as a key to save the user input in
   // local storage. HINT: What does `this` reference in the click listener
