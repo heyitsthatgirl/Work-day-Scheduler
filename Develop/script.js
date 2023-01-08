@@ -7,13 +7,25 @@ console.log(dayObject.format("dddd MM/DD/YYYY hh:mma"));
 // function only executes once all elements are loaded onto the page
 $(function () {
 
+  // text entry from each hourly block will be stored separately in local storage
   $('button').click(function(){
     var scheduleBlock = $(this).parent().attr('id');
     var txt = $(this).siblings('textarea').val();
     localStorage.setItem(scheduleBlock, txt);
   })
 
-  
+  // display the text from local storage in each schedule block
+  $('#hour-9 .description').val(localStorage.getItem("hour-9"));
+  $('#hour-10 .description').val(localStorage.getItem("hour-10"));
+  $('#hour-11 .description').val(localStorage.getItem("hour-11"));
+  $('#hour-12 .description').val(localStorage.getItem("hour-12"));
+  $('#hour-13 .description').val(localStorage.getItem("hour-13"));
+  $('#hour-14 .description').val(localStorage.getItem("hour-14"));
+  $('#hour-15 .description').val(localStorage.getItem("hour-15"));
+  $('#hour-16 .description').val(localStorage.getItem("hour-16"));
+  $('#hour-17 .description').val(localStorage.getItem("hour-17"));
+  $('#hour-18 .description').val(localStorage.getItem("hour-18"));
+
   // TODO: Add a listener for click events on the save button. This code should
   // use the id in the containing time-block as a key to save the user input in
   // local storage. HINT: What does `this` reference in the click listener
@@ -35,19 +47,5 @@ $(function () {
 });
 
 
-// var myDate = new Date();
-// var myDateFormatted = formatDate(myDate);
 
-// function formatDate(dateObject) {
-//   var parts = {
-//     date: dateObject.getDate(),
-//     month: dateObject.getMonth() + 1,
-//     year: dateObject.getFullYear(),
-//     hour: (dateObject.getHours() % 12) || 12,
-//     minute: dateObject.getMinutes().toString().padStart(2, "0"),
-//     amOrPm: dateObject.getHours() <12 ? "AM" : "PM"
-//   };
-//   return `${parts.month}/${parts.date}/${parts.year} ${parts.hour}:${parts.minute} ${parts.amOrPm}`;
-// }
-// console.log(myDateFormatted);
 
