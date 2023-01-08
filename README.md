@@ -16,7 +16,7 @@ More info:
 
 The Work Day Scheduler was created using a combination of HTML, CSS, jQuery, and Day.js.<br/>
 
-Deployed site: <br/>
+Deployed site: https://hopemansfield.github.io/Work-day-Scheduler/<br/>
 
 ![workday-scheduler-screenshot](https://user-images.githubusercontent.com/116748007/211209282-fb428c8f-b13c-4d3b-b99d-8ed047cb8bb0.png)
 
