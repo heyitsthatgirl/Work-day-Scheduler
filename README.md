@@ -2,7 +2,7 @@
 
 The Work Day Scheduler is a simple schedule application that allows the user to add important events into a daily planner.
 
-#How to Use:
+How to Use:
 
 When the user opens the application they will see the current day and time displayed at the top of the page. <br/>
 
@@ -12,7 +12,7 @@ The text the user entered will stay on the schedule, even if they refresh their 
 
 The schedule is color coded by past, present, and future so that the user can easily see what task needs to be done at that time.<br/>
 
-#More info:
+More info:
 
 The Work Day Scheduler was created using a combination of HTML, CSS, jQuery, and Day.js.<br/>
 
