@@ -4,15 +4,16 @@ let date = document.getElementById('currentDay');
 date.innerHTML = dayObject.format("dddd MM/DD/YYYY hh:mma");
 console.log(dayObject.format("dddd MM/DD/YYYY hh:mma"));
 
-
 // function only executes once all elements are loaded onto the page
 $(function () {
- 
+
   $('button').click(function(){
-    var txt = $('textarea').val();
-    console.log(txt);
-    localStorage.setItem("to do: ", JSON.stringify(txt));
-  });
+    var scheduleBlock = $(this).parent().attr('id');
+    var txt = $(this).siblings('textarea').val();
+    localStorage.setItem(scheduleBlock, txt);
+  })
+
+  
   // TODO: Add a listener for click events on the save button. This code should
   // use the id in the containing time-block as a key to save the user input in
   // local storage. HINT: What does `this` reference in the click listener
